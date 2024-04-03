@@ -86,8 +86,6 @@ var
     regM: producto;
     i: Integer;
 begin
-    Assign(producto_texto, 'productos_stock_bajo.txt');
-
     Rewrite(producto_texto);
     Reset(maestro);
     for i := 0 to DF do begin
@@ -128,6 +126,7 @@ var
 begin
     asignarMaestro(archivo_maestro);
     asignarDetalle(archivos_detalle);
+        Assign(producto_texto, 'productos_stock_bajo.txt');
 
     procesarArchivos(archivo_maestro, archivos_detalle, producto_texto);
 end.
