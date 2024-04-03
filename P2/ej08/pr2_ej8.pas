@@ -80,43 +80,10 @@ begin
     Close(maestro);
 end;
 
-procedure leerArchivo(var archivo: archivo_venta);
-    procedure leerRegistro(var reg: venta);
-    begin
-        Write('Codigo cliente: '); ReadLn(reg.cliente.codigo);
-        if(reg.cliente.codigo <> 0) then begin
-            Write('Nombre: '); ReadLn(reg.cliente.nombre);
-            Write('Apellido: '); ReadLn(reg.cliente.apellido);
-            Write('Anio: '); ReadLn(reg.anio);
-            Write('Mes: '); ReadLn(reg.mes);
-            Write('Dia: '); ReadLn(reg.dia);
-            Write('Monto: '); ReadLn(reg.monto);
-        end;
-        WriteLn;
-    end;
-var
-    reg: venta;
-begin
-    Rewrite(archivo);
-
-    leerRegistro(reg);
-    while(reg.cliente.codigo <> 0) do begin
-        Write(archivo, reg);
-        leerRegistro(reg);
-    end;
-
-    WriteLn;
-    WriteLn;
-
-    Close(archivo);
-end;
-
 var
     archivo_maestro: archivo_venta;
 begin
     asignar(archivo_maestro);
-
-    //leerArchivo(archivo_maestro);
 
     WriteLn;
 
