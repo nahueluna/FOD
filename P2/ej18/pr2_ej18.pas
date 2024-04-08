@@ -1,8 +1,7 @@
 program pr2_ej18;
 const
     valorAlto = 9999;
-    DF = 1;
-    //DF = 49;
+    DF = 49;
 type
     rDireccion = record
         calle: String[30];
