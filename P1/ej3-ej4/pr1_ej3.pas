@@ -105,7 +105,7 @@ begin
     end;
 end;
 
-function existeEmpleado(var arch_empl: empleados; numEmpl: Integer; var encontrado: boolean);
+procedure existeEmpleado(var arch_empl: empleados; numEmpl: Integer; var encontrado: boolean);
 var
     reg: empleado;
 begin
