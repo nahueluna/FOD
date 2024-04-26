@@ -105,15 +105,10 @@ var
 begin
     AsignarArchivo(archivo);
 
-    listarFlores(archivo);
-
     flor.nombre := 'Tulipán';
     flor.codigo := 2;
 
-    ReadLn;
     eliminarFlor(archivo, flor);
-
-    listarFlores(archivo);
 
     flor.nombre := 'Margarita';
     flor.codigo := 8;

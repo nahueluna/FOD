@@ -62,7 +62,8 @@ begin
 
     Close(maestro);
     Close(maestro_nuevo);
-    Rename(maestro_nuevo, nombre_archivo);
+    Erase(nombre_archivo);  //borro el anterior archivo maestro
+    Rename(maestro_nuevo, nombre_archivo);  //renombro el nuevo maestro con el nombre del anterior
 end;
 
 var
